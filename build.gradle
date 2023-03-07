@@ -2,6 +2,11 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.9'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'distribution'
+	id 'application'
+}
+application {
+	mainClass = 'com/severstal/career/notes/NotesApplication.java'
 }
 
 group = 'com.severstal.career'
@@ -19,9 +24,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
 	implementation 'org.liquibase:liquibase-core'
-
+	//
+	implementation 'org.liquibase:liquibase-core'
+	//
 	runtimeOnly 'com.h2database:h2:1.4.200'
-
+	runtimeOnly 'org.postgresql:postgresql:42.5.0'
 	compileOnly 'org.projectlombok:lombok'
 
 	annotationProcessor 'org.projectlombok:lombok'
