@@ -27,7 +27,7 @@ public class NotesApplicationTests {
     @Test
     void testGetNotes() throws Exception {
         MockHttpServletResponse response = mockMvc
-                .perform(get("/notes"))
+                .perform(get("/"))
                 .andReturn()
                 .getResponse();
 
