@@ -7,9 +7,9 @@ logging:
 
 spring:
   datasource:
-    url: ${JDBS_DATABASE_URL}
-    username: ${JDBC_DATABASE_USERNAME}
-    password: ${JDBC_DATABASE_PASSWORD}
+    url: jdbc:postgresql://dpg-cf7sf8pa6gdpab9f7km0-a.oregon-postgres.render.com:5432/postgresql_gkol
+    username: postgresql_gkol_user
+    password: nmP8FGL8BlKCkl9NAyQR6m30hwFZ2Vgk
   jpa:
     show-sql: true
 
