@@ -16,7 +16,7 @@ public class NoteController {
     @Autowired
     private NoteService noteService;
 
-    @GetMapping(path = "/notes")
+    @GetMapping(path = "/")
     public String getNotes(Model model) {
         Iterable<Note> notes = this.noteService.findAll();
         model.addAttribute("notes", notes);
@@ -30,7 +30,7 @@ public class NoteController {
     @PostMapping(path = "/note-create")
     public String createNote(Note note) {
         this.noteService.saveNote(note);
-        return "redirect:/notes";
+        return "redirect:/";
     }
 
     @GetMapping(path = "/{id}")
@@ -41,7 +41,7 @@ public class NoteController {
     @GetMapping(path = "/note-delete/{id}")
     public String deleteNote(@PathVariable long id) {
         this.noteService.deleteById(id);
-        return "redirect:/notes";
+        return "redirect:/";
     }
 
     @GetMapping(path = "/note-update/{id}")
@@ -54,7 +54,7 @@ public class NoteController {
     @PostMapping(path = "/note-update")
     public String updateNote(Note note) {
         this.noteService.saveNote(note);
-        return "redirect:/notes";
+        return "redirect:/";
     }
 
 }
