@@ -11,5 +11,3 @@ jobs:
           java-version: 17
       - name: run Gradle build
         run: gradle build
-      - name: get coverage report
-        uses: paambaati/codeclimate-action@v3.0.0
